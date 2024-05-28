@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+    background-attachment: fixed;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    position: relative; /* Add position relative */
+    max-height:45px;
+}
+
+header {
+    background-color: #333;
+    color: rgb(205, 203, 203);
+    padding: 0.5rem; /* Adjust the padding as needed */
+    font-size:10px;
+}
+
+header img {
+    max-width: 150px; /* Adjust the max width of the logo as needed */
+    max-height: 140px; /* Adjust the max height of the logo as needed */
+    margin: 0 auto; /* Center the logo */
+}
+
+header h1 {
+    margin-left: 20px; /* Adjust margin-left as needed */
+}
+
+
+
+nav {
+    margin-left:10px; /* Move the navigation to the right */
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color:  rgb(205, 203, 203);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: medium;
+}
+
+nav ul li a:hover {
+    color:  rgb(141, 141, 141);
+}
+
+.hero {
+    background:rgb(141, 141, 141);
+    color: black;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1rem auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+.hero p strong {
+    font-weight: bolder; /* Apply bold font weight */
+    color: #333 ;
+}
+
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.product {
+    background-color:rgb(141, 141, 141);
+    border: 1px solid #ddd;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    width: calc(33% - 2rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+h2#products-heading {
+    color: rgb(141, 141, 141);
+    text-align: center; /* Centering the heading */
+    position: relative;
+    top: 80px; /* Adjust the value as needed */
+}
+
+
+
+
+.product:hover {
+    transform: translateY(-5px);
+    background-color:rgb(75, 75, 75); /* Change border color on hover */
+}
+
+.product h3:hover {
+    cursor: pointer; /* Change cursor on hover */
+}
+#slider {
+    overflow: hidden;
+    text-align: center;
+    
+    padding: 0.5rem 0;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    width: calc(400px * 8); /* 4 images * 2 (for duplication) */
+    animation: slide 15s linear infinite; /* Adjust duration as needed */
+}
+
+.slider-image {
+    width: 400px;
+    height: auto;
+    margin-right: 40px; /* Adjust the default margin between images */
+    border-radius: 10px;
+}
+
+.slider-image:nth-child(4n+4) {
+    margin-right: 80px; /* Adjust the margin for every fourth image */
+}
+
+
+
+@keyframes slide {
+    100% { transform: translateX(2000px); }
+    0% { transform: translateX(-2000px); }
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 0.2rem 0; /* Reduce the top and bottom padding */
+    text-align: center;
+    font-size: 0.6rem; /* Reduce the font size */
+    line-height: 0.0; /* Adjust the line-height */
+}
+
+.footer-content {
+    max-width: 500px; /* Reduce the max-width */
+    margin: 0 auto;
+    max-height: 8px;
+}
+
+#contact {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4; /* Adjust the background color as needed */
+    line-height: 0.10;
+}
+
+#contact h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.instagram-link:hover {
+    color: rgb(75, 75, 75); /* Change to the desired hover color */
+}
+
+.instagram-icon {
+    width: 20px; /* Adjust the size of the Instagram icon as needed */
+    height: 20px; /* Adjust the size of the Instagram icon as needed */
+    margin-right: 5px; /* Adjust the spacing as needed */
+}
+
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: calc(100% - 2rem);
+    }
+}
